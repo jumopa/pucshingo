@@ -3,12 +3,8 @@ import random
 
 app = FastAPI()
 
-#127.0.0.1:8000/
-@app.get("/")
+@app.get("/helloworld")
 async def root():
     return {"message": "Hello World"}
-
-#127.0.0.1:8000/teste
-@app.get("/teste")
 async def funcaotest():
     return {"teste": True, "numero_aleatorio": random.randint(0, 1000)}
